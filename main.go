@@ -17,6 +17,6 @@ func main() {
 	fmt.Println(IsOne(1))
 	fmt.Println(IsOne(0))
 
-	sl := []int{1, 2, 3, 4, 5}
+	sl := []int{1, 2, 3, 4, 6}
 	fmt.Println(alib.Average(sl))
 }
