@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "Golang/alib"
+import (
+	"Golang/alib"
+	"fmt"
+)
 
 func IsOne(i int) bool {
 	if i == 1 {
@@ -15,5 +17,6 @@ func main() {
 	fmt.Println(IsOne(1))
 	fmt.Println(IsOne(0))
 
-	
+	sl := []int{1, 2, 3, 4, 5}
+	fmt.Println(alib.Average(sl))
 }
