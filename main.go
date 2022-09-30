@@ -1,22 +1,14 @@
 package main
 
-import (
-	"Golang/alib"
-	"fmt"
-)
-
-func IsOne(i int) bool {
-	if i == 1 {
-		return true
-	} else {
-		return false
-	}
-}
+import "fmt"
 
 func main() {
-	fmt.Println(IsOne(1))
-	fmt.Println(IsOne(0))
-
-	sl := []int{1, 2, 3, 4, 6}
-	fmt.Println(alib.Average(sl))
+	switch n := 3; n {
+	case 1, 2:
+		fmt.Println("1 or 2")
+	case 3, 4:
+		fmt.Println("3 or 4")
+	default:
+		fmt.Println("I don't know.")
+	}
 }
