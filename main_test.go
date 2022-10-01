@@ -6,10 +6,11 @@ var Debug bool = false
 
 func TestIsOne(t *testing.T) {
 	if Debug {
-		t.Skip("skip skip")
+		t.Skip("スキップします。")
 	}
 
 	i := 1
+
 	v := IsOne(i)
 	if !v {
 		t.Errorf("%v != %v", i, 1)

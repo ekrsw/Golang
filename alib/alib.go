@@ -1,9 +1,9 @@
 package alib
 
-func Average(s []int) int {
+func Average(sl []int) int {
 	total := 0
-	for _, i := range s {
-		total += i
+	for _, u := range sl {
+		total += u
 	}
-	return int(total / len(s))
+	return int(total / len(sl))
 }

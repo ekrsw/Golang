@@ -6,12 +6,12 @@ var Debug bool = false
 
 func TestAverage(t *testing.T) {
 	if Debug {
-		t.Skip("Average is skipped")
+		t.Skip("スキップする")
 	}
 
 	sl := []int{1, 2, 3, 4, 5}
 	v := Average(sl)
-	if 3 != v {
+	if v != 3 {
 		t.Errorf("%v != %v", v, 3)
 	}
 }
