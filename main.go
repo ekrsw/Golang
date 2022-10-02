@@ -5,14 +5,11 @@ import (
 	"os"
 )
 
-func main() {
-	file, err := os.Create("test.log")
+func main () {
+	file, err := os.Open("test1.log")
 	if err != nil {
-		log.Fatalln(err)
+		log.SetOutput(os.Stdout)
+		log.Println(err)
 	}
 	defer file.Close()
-
-	log.SetOutput(file)
-	log.SetFlags(log.LstdFlags)
-	log.Println("標準のログフォーマット")
 }
