@@ -1,15 +1,14 @@
 package main
 
 import (
-	"log"
 	"os"
+	"log"
 )
 
-func main () {
-	file, err := os.Open("test1.log")
+func main() {
+	logger := log.New(os.Stdout, "", log.Ldate | log.Ltime | log.Lshortfile)
+	_, err := os.Open("sdfasdf")
 	if err != nil {
-		log.SetOutput(os.Stdout)
-		log.Println(err)
+		logger.Fatalln("Exit", err)
 	}
-	defer file.Close()
 }
