@@ -1,1 +1,2 @@
-[LOG]2022/10/02 15:32:38 message
+[LOG]2022/10/03 17:37:46 main.go:19: message
+[LOGGER]2022/10/03 17:37:46 message1
