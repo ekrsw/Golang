@@ -1,11 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
+
+func Sum(s ..int) int {
+	n := 0
+	for _, u := range s {
+		n += u
+	}
+	return n
+}
 
 func main() {
-	i := strconv.Itoa(100)
-	fmt.Printf("%v, %T\n", i, i)
+	fmt.Println(Sum(1, 2, 3, 4, 5))
 }
