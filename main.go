@@ -1,15 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"golang.org/x/text/encoding/japanese"
+    "golang.org/x/text/transform"
 
-func Sum(s ..int) int {
-	n := 0
-	for _, u := range s {
-		n += u
-	}
-	return n
-}
+	"encoding/csv"
+	"io"
+	"log"
+	"os"
+	"fmt"
+)
 
 func main() {
-	fmt.Println(Sum(1, 2, 3, 4, 5))
+	file, err := os.Open("test.csv")
+	if err != nil {
+		log.Fatalln(err)
+	}
+	defer file.Close()
+
+	reader := csv.NewReader(transform.NewReader(file, japanese.ShiftJIS.NewDecoder()))
+
+	records, _ := reader.ReadAll()
+	for _, row := range records {
+		fmt.Println(row)
+	}
 }
