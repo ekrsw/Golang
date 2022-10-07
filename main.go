@@ -2,17 +2,16 @@ package main
 
 import (
 	"golang.org/x/text/encoding/japanese"
-    "golang.org/x/text/transform"
+	"golang.org/x/text/transform"
 
 	"encoding/csv"
-	"io"
 	"log"
 	"os"
 	"fmt"
 )
 
 func main() {
-	file, err := os.Open("test.csv")
+	file, err := os.Open("test_data.csv")
 	if err != nil {
 		log.Fatalln(err)
 	}
