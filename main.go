@@ -1,10 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
+
+func Double(x []int) {
+	for i, v := range x {
+		x[i] = v * 2
+	}
+}
 
 func main() {
-	fmt.Println(strconv.FormatFloat(1231345.456789, 'f', 2, 64))
+	sl := []int{1, 2, 3, 4}
+	Double(sl)
+	fmt.Println(sl)
 }
