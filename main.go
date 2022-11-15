@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/rocketlaunchr/dataframe-go"
-	"gonum.org/v1/gonum/stat"
+	"strconv"
 )
 
 func main() {
-	df := dataframe.NewSeriesFloat64("data", nil, 1, 2, 3, 4, 5, 6, 7, 8, 9)
-	fmt.Println(df.Table())
+	var i int = 100
+	s := strconv.Itoa(i)
+
+	s2 := strconv.FormatInt(i)
+
+	fmt.Println(s, 10)
 }
