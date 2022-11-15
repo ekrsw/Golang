@@ -6,7 +6,7 @@ var Debug bool = false
 
 func TestIsOne(t *testing.T) {
 	if Debug {
-		t.Skip("skip skip skip")
+		t.Skip("test test test")
 	}
 
 	i := 1
